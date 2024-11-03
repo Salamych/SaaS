@@ -1,0 +1,46 @@
+@import './base/font.scss';
+@import './config/variables.scss';
+@import './base/base.scss';
+@import './base/content.scss';
+
+
+.container{
+  max-width: 1146px;
+  margin: 0 auto;
+  padding: 0 $offset*2;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 $offset*(-1);
+}
+
+.col{
+	margin: 0 $offset;
+	box-sizing: border-box;
+}
+
+/*Header*/
+
+@import './block/header.scss';
+
+/*Buisness*/
+
+@import './block/buisness.scss';
+
+/*Partners*/
+
+@import './block/partners.scss';
+
+/*Graphics*/
+
+@import './block/graphics.scss';
+
+/*Metrics*/
+
+@import './block/metrics.scss';
+
+/*Metrics*/
+
+@import './block/service.scss';

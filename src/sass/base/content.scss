@@ -1,0 +1,26 @@
+.content{
+  max-width: calc((100%/12)*5);
+}
+.content-img {
+  max-width: calc((100%/12)*7);
+}
+.description-title{
+  font-size: 50px;
+  color: $darck;
+  font-weight: 700;
+  letter-spacing: -1.56px;
+  margin-bottom: 30px;
+}
+
+.description-text{
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.conent-link{
+  text-decoration: none;
+  color: $violet;
+  font-size: 17px;
+  font-weight: 700;
+}

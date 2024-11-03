@@ -44,6 +44,7 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-size": "^5.0.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-ttf2woff2": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^5.0.0",

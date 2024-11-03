@@ -1,0 +1,52 @@
+@import '../config/variables.scss';
+
+.business{
+  &-content{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  &-description {
+    max-width: calc((100% / 12)*4);
+  }
+  &-description__list {
+    margin-bottom: 50px;
+  }
+  &-img {
+    max-width: calc((100% / 12)*6.5);
+  }
+  &-title {
+    font-size: 80px;
+    color: $darck;
+    letter-spacing: -4px;
+    line-height: 77px;
+    font-weight: 700;
+    margin-bottom: 30px;  
+  }
+  &-btn{
+    background-color: $violet;
+  }
+
+}
+
+.arrow{
+width: 60px;
+height: 60px;
+border: 1px solid #e7e7e7;
+border-radius: 50%;
+color: $darck;
+font-size: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+&:hover{
+  border: 1px solid $darck;
+}
+
+}
+
+
+
+/* &darr; */
+

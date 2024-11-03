@@ -1,3 +1,5 @@
+import svgSprite from "gulp-svg-sprite";
+
 const isProd = process.argv.includes("--production");
 const isDev = !isProd;
 
@@ -11,7 +13,9 @@ const app = {
 
   imagemin: {verbose: true},
 
-  fonter: {formats: ["ttf", "woff", "eot", "svg"]}
+  fonter: {formats: ["ttf", "woff", "eot", "svg"]},
+
+  svgSprite: {mode: {stack: {sprite: "../sprite.svg"}},}
 
 }
 

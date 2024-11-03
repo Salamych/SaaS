@@ -1,0 +1,38 @@
+@import './config/variables.scss';
+
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $dmsans;
+  font-weight: 400;
+  color: $darck-light;
+}
+
+dd {
+  margin: 0;
+}
+
+.btn {
+  width: $offset*14;
+  height: $offset*4;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-title {
+  
+}
