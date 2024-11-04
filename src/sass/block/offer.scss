@@ -1,0 +1,152 @@
+@import '../config/variables.scss';
+
+.offer-content {
+  margin-bottom: 80px;
+}
+
+/*Offer-head*/
+
+.offer-content__head{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.offer-content__head-title {
+  max-width: calc((100%/12)*6);
+}
+.offer-content__head-toggle{
+  max-width: calc((100%/12)*4);
+}
+.h2{
+  color: $darck;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -2px;
+}
+
+.toggle-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $offset*23;
+  height: $offset*4.5;
+  background-color: #f7f7fb;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $darck;
+}
+
+.btn-year,
+.btn-month {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $offset*11;
+  height: $offset*3.6;
+  background-color: $violet;
+  color: #fff;
+}
+
+.active-toggle{
+  background-color: inherit;
+  color: inherit;
+}
+
+.btn-year{
+  border-radius: 10px 0 0 10px; 
+}
+
+.btn-month{
+  border-radius: 0 10px 10px 0;
+}
+
+/*Offer-price*/
+
+.offer-content__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-content__price-starter,
+.offer-content__price-premium,
+.offer-content__price-enterprise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $offset*22;
+  height: $offset*29.4;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.offer-content__overview-sites,
+.offer-content__overview-hosting,
+.offer-content__overview-support {
+  font-family: $mulish;
+  margin-bottom: 30px;
+}
+
+.offer-content__overview-support{
+  margin-bottom: 50px;
+}
+
+.offer-content__overview-name{
+  font-size: 18px;
+}
+
+.offer-content__overview-price,
+.offer-content__overview-name{
+  margin-bottom: 22px;
+}
+
+.time,
+.price {
+  font-weight: 700;
+  color: $darck;
+}
+.time{
+  font-size: 28px;
+}
+
+.price {
+  font-size: 60px;
+}
+
+.offer-content__overview-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: $offset*19;
+  height: $offset*4;
+  border-radius: 10px;
+  border: 1px solid #eae9f2;
+  color: $violet;
+  font-weight: 700;
+}
+
+.price-toggle-active{
+  width: $offset*25;
+  height: $offset*31.5;
+  background-color: #ff7143;
+  color: #fff;
+
+  & .time, .price{
+    color: inherit;
+  }
+
+  & .offer-content__overview-btn {
+    color: inherit;
+    width: $offset*20.5;
+    background-color: #9f3919;
+    border: none;
+  } 
+  
+}
