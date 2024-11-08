@@ -1,7 +1,14 @@
-
+@import '../config/mixin.scss';
 .graphics-content {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  @include screen-maxw(990px){
+	  flex-direction: column-reverse;
+	}
+  @include screen-maxw(500px){
+	  margin-bottom: 50px;
+	}
 }
+

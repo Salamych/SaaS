@@ -1,19 +1,28 @@
 @import '../config/variables.scss';
+@import '../config/mixin.scss';
 
 .business{
   &-content{
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    @include screen-maxw(990px){
+      flex-direction: column-reverse;
+    }
   }
   &-description {
     max-width: calc((100% / 12)*4);
+    @include screen-maxw(990px){
+      max-width: 100%;
+    }
   }
   &-description__list {
     margin-bottom: 50px;
   }
   &-img {
-    max-width: calc((100% / 12)*6.5);
+    @include screen-maxw(990px){
+      max-width: 100%;
+    }
   }
   &-title {
     font-size: 80px;
@@ -21,32 +30,33 @@
     letter-spacing: -4px;
     line-height: 77px;
     font-weight: 700;
-    margin-bottom: 30px;  
-  }
-  &-btn{
-    background-color: $violet;
+    margin-bottom: 30px; 
+    @include screen-maxw(990px){
+      font-size: 60px;
+      letter-spacing: -2px;
+      line-height: normal;
+    } 
+    @include screen-maxw(600px){
+      font-size: 40px;
+    } 
   }
 
 }
 
 .arrow{
-width: 60px;
-height: 60px;
-border: 1px solid #e7e7e7;
-border-radius: 50%;
-color: $darck;
-font-size: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #e7e7e7;
+  border-radius: 50%;
+  color: $darck;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-&:hover{
-  border: 1px solid $darck;
+  &:hover{
+    border: 1px solid $darck;
+  }
+
 }
-
-}
-
-
-
-/* &darr; */
 

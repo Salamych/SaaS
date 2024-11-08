@@ -1,8 +1,16 @@
+@import '../config/mixin.scss';
+
 .content{
   max-width: calc((100%/12)*5);
+  @include screen-maxw(990px){
+	  max-width: 100%;
+	}
 }
 .content-img {
   max-width: calc((100%/12)*7);
+  @include screen-maxw(990px){
+	  max-width: 100%;
+	}
 }
 .description-title{
   font-size: 50px;
@@ -10,6 +18,12 @@
   font-weight: 700;
   letter-spacing: -1.56px;
   margin-bottom: 30px;
+  @include screen-maxw(990px){
+	  font-size: 40px;
+	}
+  @include screen-maxw(500px){
+	  font-size: 30px;
+	}
 }
 
 .description-text{

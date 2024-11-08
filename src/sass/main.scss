@@ -2,23 +2,36 @@
 @import './config/variables.scss';
 @import './base/base.scss';
 @import './base/content.scss';
+@import './config/mixin.scss';
 
 
 .container{
   max-width: 1146px;
   margin: 0 auto;
-  padding: 0 $offset*2;
+  padding: $offset*2;
+	min-width: 280px;
+	@include screen-maxw(500px){
+		padding: $offset;
+	}
+	
 }
+
 
 .row{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 $offset*(-1);
+	margin: $offset*(-1);
+	@include screen-maxw(500px){
+	  margin: $offset*(-0.5);
+	}
 }
 
 .col{
-	margin: 0 $offset;
+	margin: $offset;
 	box-sizing: border-box;
+	@include screen-maxw(500px){
+	  margin: $offset*0.5;
+	}
 }
 
 /*Header*/

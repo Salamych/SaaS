@@ -1,15 +1,75 @@
 @import '../config/variables.scss';
+@import '../config/mixin.scss';
+@import '../base/base.scss';
 
 .header_content {
-  padding-top: 40px;
+  padding-top: 10px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
+
+.header-menu{
+  position: relative;
+}
+
+.burger-wrap {
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  @include screen-maxw(840px){
+    display: block;
+  }
+}
+
+.burger, 
+.burger::before,
+.burger::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: $darck-light;
+  border-radius: 3px;
+}
+
+.burger{
+  top: 50%;
+  
+  &::before{
+    content: "";
+    top: -6px;
+  }
+  &::after{
+    content: "";
+    bottom: -6px;
+  }
+}
+
+
 
 .menu-list {
   list-style: none;
   gap:20px;
+  @include screen-maxw(990px){
+    gap: 0;
+  }
+  @include screen-maxw(840px){
+    top:50px;
+    left:-80%;
+    position: absolute;
+    display: none;
+  }
+  @include screen-maxw(500px){
+    padding: 7px;
+    background-color: #fff;
+  }
+}
+
+.menu-list.menu-list-active{
+  display: block;
 }
 
 .menu-item{
@@ -24,5 +84,9 @@
 }
 
 .header-btn{
-  background-color: #FF7143;
+  @include screen-maxw(840px){
+    display: none;
+  }
 }
+
+

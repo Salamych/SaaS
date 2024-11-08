@@ -1,4 +1,5 @@
 @import '../config/variables.scss';
+@import '../config/mixin.scss';
 
 .offer-content {
   margin-bottom: 80px;
@@ -10,19 +11,41 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 80px;
+  @include screen-maxw(750px){
+    flex-direction: column;
+	}
 }
 
 .offer-content__head-title {
   max-width: calc((100%/12)*6);
+  @include screen-maxw(990px){
+    max-width: calc((100%/12)*6 - $offset*2);
+	}
+  @include screen-maxw(750px){
+    max-width: 100%;
+	}
 }
 .offer-content__head-toggle{
   max-width: calc((100%/12)*4);
+  @include screen-maxw(990px){
+    max-width: calc((100%/12)*6 - $offset*2);
+	}
+  @include screen-maxw(750px){
+    max-width: 100%;
+	}
 }
 .h2{
   color: $darck;
   font-size: 60px;
   line-height: 60px;
   letter-spacing: -2px;
+  @include screen-maxw(990px){
+    font-size: 40px;
+	}
+  @include screen-maxw(750px){
+    font-size: 30px;
+    line-height: normal;
+	}
 }
 
 .toggle-wrap{
@@ -36,6 +59,11 @@
   font-size: 16px;
   font-weight: 700;
   color: $darck;
+  @include screen-maxw(500px){
+    width: $offset*11.5;
+    height: $offset*2;
+    margin-bottom: 30px;
+	}
 }
 
 .btn-year,
@@ -48,6 +76,10 @@
   height: $offset*3.6;
   background-color: $violet;
   color: #fff;
+  @include screen-maxw(500px){
+    width: $offset*5.5;
+    height: $offset*1.8;
+	}
 }
 
 .active-toggle{
@@ -69,21 +101,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include screen-maxw(600px){
+    flex-wrap: wrap;
+    gap: 10px;
+	}
 }
 
-.offer-content__price-starter,
-.offer-content__price-premium,
-.offer-content__price-enterprise {
+.offer-content__price-item,
+.offer-content__price-item,
+.offer-content__price-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: $offset*22;
+  //width: $offset*22;
   height: $offset*29.4;
+  width: calc((100% / 12) * 3.8);
   background-color: #f8f8f8;
   border-radius: 10px;
   font-size: 17px;
   text-align: center;
+
+  @include screen-maxw(750px){
+    height: $offset*26;
+	}
+  @include screen-maxw(600px){
+    height: $offset*26;
+    width: 100%;
+	}
 }
 
 .offer-content__overview-sites,
@@ -113,18 +158,25 @@
 }
 .time{
   font-size: 28px;
+  @include screen-maxw(750px){
+    font-size: 24px;
+	}
 }
 
 .price {
   font-size: 60px;
+  @include screen-maxw(750px){
+    font-size: 40px;
+	}
 }
 
 .offer-content__overview-btn{
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  width: $offset*19;
+  width: calc((100% / 12) * 11);
   height: $offset*4;
   border-radius: 10px;
   border: 1px solid #eae9f2;
@@ -133,7 +185,8 @@
 }
 
 .price-toggle-active{
-  width: $offset*25;
+  //width: $offset*25;
+  width: calc((100% / 12) * 4);
   height: $offset*31.5;
   background-color: #ff7143;
   color: #fff;
@@ -144,9 +197,11 @@
 
   & .offer-content__overview-btn {
     color: inherit;
-    width: $offset*20.5;
+    width: calc((100% / 12) * 11);
     background-color: #9f3919;
     border: none;
   } 
-  
+  @include screen-maxw(750px){
+    height: $offset*28;
+	}
 }

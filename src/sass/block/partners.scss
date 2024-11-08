@@ -1,4 +1,8 @@
 .partners-content{
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+  @include screen-maxw(500px){
+	  margin-top: $offset*2;
+    margin-bottom: 50px;
+	}
 }

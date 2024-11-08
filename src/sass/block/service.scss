@@ -1,12 +1,22 @@
 @import '../config/variables.scss';
+@import '../config/mixin.scss';
 
 .service-content{
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  @include screen-maxw(500px){
+	  margin-bottom: 50px;
+	}
 }
 
 .service-item{
   max-width: calc((100%/12)*4 - $offset*2);
+  @include screen-maxw(630px){
+	  max-width: calc((100%/12)*6 - $offset*2);
+	}
+  @include screen-maxw(500px){
+	  max-width: 100%;
+	}
 }
 
 .service-item__wrap{
