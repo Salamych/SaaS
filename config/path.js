@@ -35,8 +35,8 @@ const path = {
   },
 
   img: {
-    src: pathSrc + '/img/*.{png,jpg,gpeg,gif}',
-    watch: pathSrc + '/img/**/*.{png,jpg,gpeg,gif}',
+    src: pathSrc + '/img/*.{png,jpg,jpeg,gif}',
+    watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif}',
     dest: pathDest + '/img'
   },
 
